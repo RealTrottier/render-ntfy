@@ -1,0 +1,10 @@
+{
+  "name": "relay-ntfy",
+  "version": "1.0.0",
+  "description": "Relais local Arduino -> ntfy",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
