@@ -53,7 +53,12 @@ const server = http.createServer(async (req, res) => {
 
     if (req.method === "POST" && req.url === "/ntfy") {
       const body = await readRequestBody(req);
-      const message = body.trim() || "Mouvement detecte";
+      const now = new Date();
+
+const date = now.toLocaleDateString("fr-CA");
+const time = now.toLocaleTimeString("fr-CA");
+
+const message = `${body.trim() || "Mouvement detecte"} a ${time} le ${date}`;
 
       console.log(`[${new Date().toISOString()}] Message Arduino: ${message}`);
 
