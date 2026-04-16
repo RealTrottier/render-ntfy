@@ -55,8 +55,13 @@ const server = http.createServer(async (req, res) => {
       const body = await readRequestBody(req);
       const now = new Date();
 
-const date = now.toLocaleDateString("fr-CA");
-const time = now.toLocaleTimeString("fr-CA");
+const date = now.toLocaleDateString("fr-CA", {
+  timeZone: "America/Toronto"
+});
+
+const time = now.toLocaleTimeString("fr-CA", {
+  timeZone: "America/Toronto"
+});
 
 const message = `${body.trim() || "Mouvement detecte"} a ${time} le ${date}`;
 
