@@ -27,7 +27,7 @@ async function envoyerVersNtfy(message) {
     method: "POST",
     headers: {
       "Content-Type": "text/plain; charset=utf-8",
-      "Title": "Detection bureau",
+      "Title": "Detection",
       "Priority": "default",
       "Tags": "warning,eyes"
     },
